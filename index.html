@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>color maker</title>
+</head>
+<body id="b">
+<p style="font-size: 50px;font-family: Candara">Red<input type="range" min="0" max="255" value="0" id="m1"onchange="color()"></p>
+<p style="font-size: 50px;font-family: Candara">Green<input type="range" min="0" max="255" value="0" id="m2"onchange="color()"></p>
+<p style="font-size: 50px;font-family: Candara">Blue<input type="range" min="0" max="255" value="0" id="m3"onchange="color()"></p>
+<h1 style="font-family: Candara">Red:<span id="n1">0</span></h1>
+<h1 style="font-family: Candara">Green:<span id="n2">0</span></h1>
+<h1 style="font-family: Candara">Blue:<span id="n3">0</span></h1>
+<!-- این خط کد ویرایش نشود--> <a style="text-decoration:none;font-size:50px;background-color:red;" href="https://github.com/IrAliShahbazi">GitHub</a>
+<script>
+    function color() {
+        var m1 = document.getElementById("m1").value;
+        var m2 = document.getElementById("m2").value;
+        var m3 = document.getElementById("m3").value;
+        document.getElementById("b").style.backgroundColor="rgb("+m1+","+m2+","+m3+")";
+        document.getElementById("n1").innerText=m1;
+        document.getElementById("n2").innerText=m2;
+        document.getElementById("n3").innerText=m3;
+    }
+</script>
+</body>
+</html>
